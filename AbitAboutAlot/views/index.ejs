@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>AbitAboutAlot</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="index">
+
+    <div class="jumbotron text-center">
+        <h1>Abit About A lot</h1>
+        <img src="https://kugelmass.files.wordpress.com/2017/05/difficult-conversations.jpg?w=1400" alt="21 Savage Profile Photo">
+
+        <p>Login or Signup:</p>
+      <section class="buttons">
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+        <section class="banner">
+          <span>Welcome Back!!!</span>
+        </section>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+        <section class="banner">
+          <span>Welcome to the Community</span>
+        </section>
+      </section class="underButtons">
+      <section>
+        What our users say about us...
+        <ul class="comments reviews">
+        <% for(var i=0; i<reviews.length; i++) {%>
+          <li class="comment">
+            <span class="msg">"<%= reviews[i].msg %>"</span>
+          </li>
+        <% } %>
+        </ul>
+      </section>
+
+    </div>
+
+</div>
+</body>
+</html>

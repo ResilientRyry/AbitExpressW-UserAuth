@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>AbitAboutAlot</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pro"class="container">
+
+    <div id="proHead"class="page-header text-center">
+      <section>
+        <h1>Welcome,<span> <%= user.local.email %></span>!</h1>
+        <h2><span class="far fa-comments"></span> Whats on your mind?</h2>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+      </section>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <form action="/reviews" method="POST">
+                      <span>What do you think so far?</span>
+                      <input type="text" id="reviews" name="msg" placeholder="press enter when finish"value="">
+                    </form>
+                    
+                    <a href="/unlink/local" class="btn btn-default unlink">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <h3>Comments</h3>
+          <ul class="comments">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="comment">
+              <span><%= messages[i].name %></span>
+              <span class="msg"><%= messages[i].msg %></span>
+              <span><%= messages[i].thumbUp %></span>
+              <span><%= messages[i].thumbDown %></span>
+              <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+              <span><i class="fa fa-thumbs-down" aria-hidden="true"></i></span>
+              <span><i class="fas fa-trash"></i></span>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>Make a comment</h2>
+        <% if (user.local.email) { %>
+          <form action="/comments" method="POST">
+            <input type="text" value="<%= user.local.email %>" name="name">
+            <input type="text" placeholder="comments" name="msg">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

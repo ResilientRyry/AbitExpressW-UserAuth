@@ -1,0 +1,70 @@
+body{
+  padding-top:80px;
+  word-wrap:break-word;
+}
+img{
+  height: 200px;
+}
+.banner{
+  background-color: white;
+}
+#index{
+  background-color: grey;
+  color: aqua;
+}
+/* <---profile page---> */
+#reviews{
+  width: 50%;
+  height: 65px;
+  font-size: 15px;
+}
+.reviews{
+  background-color: white;
+}
+#proHead{
+  background-image: url('https://media.licdn.com/mpr/mpr/gcrc/dms/image/C4D12AQFMEKoe1Gx0wg/article-cover_image-shrink_720_1280/0?e=2130105600&v=beta&t=aXkdbfPy0KURF9l9PkQzCZC-wS02x3JMH-g9GM6aN0U');
+  background-size: contain;
+  background-repeat: space;
+  color: aqua;
+}
+#proHead section{
+  width: 45%;
+  height: 150px;
+  background-color: darkgrey;
+  margin-left: 27.5%;
+}
+#pro{
+  color: aqua;
+  text-shadow: 1px 1px 2px darkgrey;
+  font-size: 3vh;
+}
+strong{
+  color: darkgrey;
+}
+#pro .msg{
+  color: darkgrey;
+}
+li{
+  list-style: none;
+  font-size: 25px;
+}
+.well{
+  background-color: black;
+}
+.unlink{
+  background-color: red;
+  color: white;
+}
+/* <---profile page---> */
+/* <---signup page---> */
+.signup{
+  background-color: aqua;
+  color: grey;
+}
+div h1 span{
+  color: aqua;
+}
+.container{
+  background-color: grey;
+  color: white;
+}
