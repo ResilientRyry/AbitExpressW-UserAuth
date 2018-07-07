@@ -1,8 +1,6 @@
 # Abit About A lot
   An Express application with user authorization and login using MongoDb.
 
-![Homepage](AbitHompage.png)
-
 
 ![Profilepage](AbitProPage.png)
 
