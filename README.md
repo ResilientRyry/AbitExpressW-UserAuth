@@ -13,3 +13,13 @@ This was my second attempt at making an Express application with user authorizat
 ## Lessons Learned:
 
 I learned new ways of creating endpoints and pathways for gathering the information i wanted and showing it where I wanted.
+
+## Installation
+
+1. Clone repo
+2. run `npm install`
+
+## Usage
+
+1. run `node server.js`
+2. Navigate to `localhost:8080`
